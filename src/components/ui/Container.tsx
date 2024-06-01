@@ -2,11 +2,11 @@ import { ReactNode } from "react";
 
 type ContainerProps = {
   children: ReactNode;
-  className: string;
+  className?: string;
 };
 
 const Container = ({ children, className }: ContainerProps) => {
-  return <div className={`mx-auto max-w-7xl${className}`}>{children}</div>;
+  return <div className={`p-12 ${className}`}>{children}</div>;
 };
 
 export default Container;

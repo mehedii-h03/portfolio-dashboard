@@ -1,0 +1,88 @@
+{
+  "projects": [
+    {
+      "name": "Event 360",
+      "techs": [
+        "React",
+        "Tailwind",
+        "Typescript",
+        "Framer motion",
+        "Node Js",
+        "Express Js",
+        "MongoDB"
+      ],
+      "description": "Event 360 is an event management and showcasing platform. Admins control all events displayed in the user interface. Utilizing technologies like Framer Motion, we enhance user experience with smooth animations.",
+      "image": "https://i.ibb.co/fHqkyDw/screencapture-unique-belekoy-f1bc50-netlify-app-2024-03-29-22-31-44.png",
+      "features": [
+        "Administrators can add services, events, and recent events.",
+        "Administrators can delete and edit services, events, and recent events.",
+        "Animation is used throughout various sections to enhance user experience.",
+        "To ensure conformity and handle errors, TypeScript is utilized."
+      ],
+      "liveLink": "https://unique-belekoy-f1bc50.netlify.app/",
+      "githubLink": "https://github.com/mehedii-h03/event-360",
+      "Technologies": " React | React router | Tailwind | Firebase | Express Js | MongoDB | Vercel"
+    },
+    {
+      "name": "Melodia",
+      "techs": [
+        "React",
+        "Tailwind",
+        "Node Js",
+        "Express Js",
+        "Firebase",
+        "MongoDB"
+      ],
+      "description": "Melodia is a commerce website where user can buy or enroll in a course. It is a website where users can get course about learning music. It has different different dashboard for every user like instructor dashboard student dashboard and admin dashboard.",
+      "image": "https://i.ibb.co/6X6PCX5/Fire-Shot-Capture-011-Melodia-localhost.jpg",
+      "features": [
+        "Users can sign in or signup account via google or email password.",
+        "Students can select a class and make a payment with stripe payment system.",
+        "Built user-specific dashboards for student instructors and admins providing functionalities and intuitive interfaces for efficient management and seamless experience."
+      ],
+      "liveLink": "https://melodia-c35b9.web.app/",
+      "githubLink": "https://github.com/mehedii-h03/melodia"
+    },
+    {
+      "name": "Hero Toy",
+      "techs": [
+        "React",
+        "Tailwind",
+        "Node Js",
+        "Express Js",
+        "Firebase",
+        "MongoDB"
+      ],
+      "description": "The Toy Hero website is an online platform dedicated to showcasing and selling a wide range of toys. The project consists of two main components: the client-side and the server-side.",
+      "image": "https://i.ibb.co/h9rYGSC/Fire-Shot-Capture-008-Hero-Toy-hero-toy-web-app.jpg",
+      "features": [
+        "Secure multiplatform authentication using google, github and email password via firebase.",
+        "User will find fancy gallery section all product sections and many more cool sections.",
+        "Provide users with the ability to easily add update or delete their listed toys through the dedicated Add Toys and My Toys section, ensuring complete control and flexibility over their toy inventory."
+      ],
+      "liveLink": "https://hero-toy.web.app/",
+      "githubLink": "https://github.com/mehedii-h03/hero-toy"
+    },
+    {
+      "name": "Kitchen Explorer",
+      "techs": [
+        "React",
+        "Tailwind",
+        "Node Js",
+        "Express Js",
+        "Firebase",
+        "MongoDB"
+      ],
+      "description": "The Kitchen Explorer website is designed to provide users with a platform to explore various recipes, cooking tips, and kitchen gadgets. The project is divided into two main components: the client-side and the server-side.",
+      "image": "https://i.ibb.co/kct2RVK/Fire-Shot-Capture-007-Kitchen-Explorer-kitchen-explorer-b09f5-web-app.jpg",
+      "features": [
+        "Users can securely login with google, github and email password.",
+        "To enhance user experience in our chefs section card image have implemented lazy load.",
+        "Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience"
+      ],
+      "liveLink": "https://kitchen-explorer-b09f5.web.app/",
+      "githubLink": "https://github.com/mehedii-h03/kitchen-explorer",
+      "Technologies": " React | React router | Tailwind | Firebase | Express Js | MongoDB | Vercel"
+    }
+  ]
+}
