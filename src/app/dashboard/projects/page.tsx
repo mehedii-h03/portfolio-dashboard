@@ -1,3 +1,5 @@
+"use server";
+import DeleteProject from "@/components/Pages/Projects/DeleteProject";
 import EditProject from "@/components/Pages/Projects/EditProject";
 import ProjectDetails from "@/components/Pages/Projects/ProjectDetails";
 import Container from "@/components/ui/Container";
@@ -78,9 +80,8 @@ const ProjectsPage = async () => {
                   <th className="space-y-2">
                     <ProjectDetails project={project} />
                     <EditProject />
-                    <button className="bg-white border hover:bg-red-600 text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300">
-                      <AiOutlineDelete />
-                    </button>
+                    {/* TODO Have to make _id  */}
+                    <DeleteProject id={project?.id} />
                   </th>
                 </tr>
               ))}
