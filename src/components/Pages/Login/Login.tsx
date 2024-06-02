@@ -6,6 +6,8 @@ import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { useForm, SubmitHandler } from "react-hook-form";
 
+// TODO have to add functionality
+
 type UserData = {
   email: string;
   password: string;
@@ -36,26 +38,26 @@ const Login = () => {
         </div>
         {/* Form */}
         <form onSubmit={handleSubmit(onSubmit)}>
-          <div className="input-container relative flex items-center">
+          <div className="input-field-container relative flex items-center">
             <HiOutlineMail className="absolute left-4 text-xl font-semibold" />
             <input
               type="text"
-              className="input pl-12"
+              className="input-field pl-12"
               placeholder="Your email goes here"
               {...register("email", { required: true })}
             />
-            <label className="input-label">Email</label>
+            <label className="input-field-label">Email</label>
             {errors.email && <p className="text-red-500">Email is required</p>}
           </div>
-          <div className="input-container relative flex items-center">
+          <div className="input-field-container relative flex items-center">
             <FiLock className="absolute left-4 text-xl font-bold" />
             <input
               type={showPassword ? "text" : "password"}
-              className="input pl-12"
+              className="input-field pl-12"
               placeholder="Your password goes here"
               {...register("password", { required: true })}
             />
-            <label className="input-label">Password</label>
+            <label className="input-field-label">Password</label>
             {errors.password && (
               <p className="text-red-500">Password is required</p>
             )}

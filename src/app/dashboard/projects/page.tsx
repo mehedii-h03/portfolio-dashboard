@@ -5,10 +5,13 @@ import Image from "next/image";
 import Link from "next/link";
 import { AiOutlineDelete } from "react-icons/ai";
 
-const ProjectPage = async () => {
-  const res = await fetch("http://localhost:3002/projects");
+// TODO have to remove ts error
+
+const ProjectsPage = async () => {
+  const res = await fetch("http://localhost:3005/projects", {
+    cache: "no-store",
+  });
   const projects = await res.json();
-  console.log(projects);
 
   return (
     <Container>
@@ -60,20 +63,20 @@ const ProjectPage = async () => {
                   </td>
                   <td className="space-y-1">
                     <Link
-                      href={project.liveLink}
+                      href={project?.liveLink ? project?.liveLink : "/"}
                       className="font-semibold text-blue-600 block"
                     >
                       Live
                     </Link>
                     <Link
-                      href={project.githubLink}
+                      href={project?.githubLink ? project?.githubLink : "/"}
                       className="font-semibold text-blue-600 block"
                     >
                       Github
                     </Link>
                   </td>
                   <th className="space-y-2">
-                    <ProjectDetails project={project}/>
+                    <ProjectDetails project={project} />
                     <EditProject />
                     <button className="bg-white border hover:bg-red-600 text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300">
                       <AiOutlineDelete />
@@ -89,4 +92,4 @@ const ProjectPage = async () => {
   );
 };
 
-export default ProjectPage;
+export default ProjectsPage;

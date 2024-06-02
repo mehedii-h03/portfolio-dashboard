@@ -1,5 +1,7 @@
 "use client";
 import { FaRegEdit } from "react-icons/fa";
+// TODO have remove ts error and add edit design and functionality
+
 
 const EditProject = () => {
   return (

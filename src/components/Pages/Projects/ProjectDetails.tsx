@@ -1,6 +1,8 @@
 "use client";
 import { TbListDetails } from "react-icons/tb";
 
+// TODO have remove ts error and add details design
+
 const ProjectDetails = ({ project }) => {
   return (
     <>

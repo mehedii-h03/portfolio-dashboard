@@ -3,13 +3,13 @@
 @tailwind utilities;
 
 /* Input container */
-.input-container {
+.input-field-container {
     margin-bottom: 2rem;
     height: 4rem;
 }
 
 /* Input label */
-.input-label {
+.input-field-label {
     position: absolute;
     top: -0.75rem;
     left: 1.25rem;
@@ -22,26 +22,26 @@
 }
 
 /* Input field */
-.input {
+.input-field {
     width: 100%;
     height: 100%;
-    border: 1.5px solid rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(0, 0, 0, 0.3);
     background: none;
     color: hsl(0, 0%, 46%);
     outline: none;
-    border-radius: 1.2rem;
+    border-radius: .50rem;
     padding: 1.5rem;
     padding-left: 3rem;
 }
 
 /* Media query for small screens */
 @media screen and (max-width: 390px) {
-    .input-container {
+    .input-field-container {
         margin-bottom: 1.9rem;
         height: 3rem;
     }
 
-    .input {
+    .input-field {
         padding-left: 2.5rem;
     }
 }

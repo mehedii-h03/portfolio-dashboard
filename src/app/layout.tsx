@@ -46,7 +46,7 @@ export default function RootLayout({
                 <a>Dashboard</a>
               </li>
               <li>
-                <Link href={"/projects"}>
+                <Link href={"/dashboard/projects"}>
                   <PiFilesBold /> Projects
                 </Link>
               </li>
@@ -56,9 +56,9 @@ export default function RootLayout({
                 </a>
               </li>
               <li>
-                <a>
+                <Link href={"/dashboard/add-project"}>
                   <LuFileSignature /> Add Projects
-                </a>
+                </Link>
               </li>
               <li className="pb-6">
                 <a>
