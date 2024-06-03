@@ -15,7 +15,7 @@ const DeleteBlog = ({ blogId }: { blogId: string }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://localhost:3005/blogs/${blogId}`, {
+          const res = await fetch(`https://server-five-inky-48.vercel.app/blogs/${blogId}`, {
             method: "DELETE",
             cache: "no-store",
           });

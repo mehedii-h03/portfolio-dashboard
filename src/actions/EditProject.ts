@@ -7,12 +7,13 @@ export const EditProject = async (
   updatedProjectInfo: Project
 ) => {
   try {
-    const res = await fetch(`http://localhost:3005/projects/${projectId}`, {
+    const res = await fetch(`https://server-five-inky-48.vercel.app/projects/${projectId}`, {
       method: "PUT",
       headers: {
         "Content-Type": "application/json",
       },
       body: JSON.stringify(updatedProjectInfo),
+      cache: "no-store",
     });
 
     console.log(projectId, updatedProjectInfo);

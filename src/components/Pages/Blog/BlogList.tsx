@@ -1,7 +1,5 @@
 import { BlogFormData } from "@/app/dashboard/add-blog/page";
 import Image from "next/image";
-import Link from "next/link";
-import DeleteProject from "../Projects/DeleteProject";
 import DeleteBlog from "./DeleteBlog";
 
 const BlogList = ({ blogs }: { blogs: BlogFormData[] }) => {
@@ -13,13 +11,14 @@ const BlogList = ({ blogs }: { blogs: BlogFormData[] }) => {
             <tr className="text-sm text-black">
               <th>Sl No</th>
               <th>Project Name</th>
+              <th>Short Description</th>
               <th>Description</th>
               <th>Actions</th>
             </tr>
           </thead>
           <tbody>
             {blogs.map((blog, i) => (
-              <tr key={blog.id}>
+              <tr key={blog._id}>
                 <th>
                   <p className="font-semibold"> {i + 1}</p>
                 </th>
@@ -40,10 +39,11 @@ const BlogList = ({ blogs }: { blogs: BlogFormData[] }) => {
                     </div>
                   </div>
                 </td>
+                <td>{blog?.shortDesc}</td>
                 <td dangerouslySetInnerHTML={{ __html: blog?.content }}></td>
-                {blog.id && (
+                {blog?._id && (
                   <td>
-                    <DeleteBlog blogId={blog.id} />
+                    <DeleteBlog blogId={blog?._id} />
                   </td>
                 )}
               </tr>

@@ -2,7 +2,7 @@ import BlogList from "@/components/Pages/Blog/BlogList";
 import Container from "@/components/ui/Container";
 
 const BlogPage = async () => {
-  const res = await fetch("http://localhost:3005/blogs", {
+  const res = await fetch("https://server-five-inky-48.vercel.app/blogs", {
     cache: "no-store",
   });
   const blogs = await res.json();

@@ -6,21 +6,31 @@ import ProjectDetailsModal from "@/components/Pages/Projects/ProjectDetailsModal
 import Image from "next/image";
 import Link from "next/link";
 import { TbListDetails } from "react-icons/tb";
+import { FaRegEdit } from "react-icons/fa";
 import { Project } from "@/types/type";
 
 const ProjectList = ({ projects }: { projects: Project[] }) => {
   const [selectedProject, setSelectedProject] = useState<Project | null>(null);
+  const [editProject, setEditProject] = useState<Project | null>(null);
   const detailsModalRef = useRef<HTMLDialogElement>(null);
   const editModalRef = useRef<HTMLDialogElement>(null);
 
-  const handleOpenModal = (project: Project) => {
+  const handleOpenDetailsModal = (project: Project) => {
     setSelectedProject(project);
+  };
+
+  const handleOpenEditModal = (project: Project) => {
+    setEditProject(project);
+    if (editModalRef.current) {
+      editModalRef.current.showModal();
+    }
   };
 
   const handleCloseModal = () => {
     if (detailsModalRef.current) detailsModalRef.current.close();
     if (editModalRef.current) editModalRef.current.close();
     setSelectedProject(null);
+    setEditProject(null);
   };
 
   useEffect(() => {
@@ -90,13 +100,18 @@ const ProjectList = ({ projects }: { projects: Project[] }) => {
                 </td>
                 <td className="space-y-2">
                   <button
-                    onClick={() => handleOpenModal(project)}
-                    className="bg-white border hover:bg-TPrimary text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300"
+                    onClick={() => handleOpenDetailsModal(project)}
+                    className="bg-white border hover:bg-TPrimary text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300 block"
                   >
                     <TbListDetails />
                   </button>
-                  <EditProjectModal project={project} modalRef={editModalRef} />
-                  <DeleteProject id={project?.id} />
+                  <button
+                    onClick={() => handleOpenEditModal(project)}
+                    className="bg-white border hover:bg-orange-400 text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300 block"
+                  >
+                    <FaRegEdit />
+                  </button>
+                  {project?._id && <DeleteProject projectId={project._id} />}
                 </td>
               </tr>
             ))}
@@ -107,6 +122,13 @@ const ProjectList = ({ projects }: { projects: Project[] }) => {
         <ProjectDetailsModal
           project={selectedProject}
           modalRef={detailsModalRef}
+          onClose={handleCloseModal}
+        />
+      )}
+      {editProject && (
+        <EditProjectModal
+          project={editProject}
+          modalRef={editModalRef}
           onClose={handleCloseModal}
         />
       )}

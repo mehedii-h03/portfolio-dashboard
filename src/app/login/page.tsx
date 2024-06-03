@@ -6,8 +6,6 @@ import { useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa6";
 import { useForm, SubmitHandler } from "react-hook-form";
 
-// TODO have to add functionality
-
 type UserData = {
   email: string;
   password: string;
@@ -21,7 +19,7 @@ const Login = () => {
     formState: { errors },
   } = useForm<UserData>();
 
-  const onSubmit: SubmitHandler<UserData> = (data) => {
+  const onSubmit: SubmitHandler<UserData> = async (data) => {
     console.log(data);
   };
 

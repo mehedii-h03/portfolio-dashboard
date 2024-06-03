@@ -67,10 +67,10 @@ export default function RootLayout({
                 </Link>
               </li>
               <li className="border-t pt-2">
-                <a>
+                <Link href="https://mehedi-phi.vercel.app/" target="_blank">
                   <GoHome />
                   Home
-                </a>
+                </Link>
               </li>
             </ul>
           </div>

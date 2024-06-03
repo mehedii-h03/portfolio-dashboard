@@ -11,9 +11,10 @@ import { CreateBlog } from "@/actions/CreateBlog";
 const ReactQuill = dynamic(() => import("react-quill"), { ssr: false });
 
 export type BlogFormData = {
-  id?: string;
+  _id?: string;
   blogTitle: string;
   image: string;
+  shortDesc: string;
   content: string;
 };
 const AddBlogPage = () => {
@@ -34,6 +35,7 @@ const AddBlogPage = () => {
     const blogData: BlogFormData = {
       content: value,
       blogTitle: data.blogTitle,
+      shortDesc: data.shortDesc,
       image: data.image,
     };
     try {
@@ -83,6 +85,15 @@ const AddBlogPage = () => {
               <p className="text-red-500">Image Link is required</p>
             )}
           </div>
+        </div>
+        <div className="relative">
+          <HiOutlineMail className="absolute left-4 top-[1.6rem] text-xl font-semibold pointer-events-none" />
+          <textarea
+            rows={4}
+            placeholder="Short Description"
+            className="input-field w-full pl-12 pt-3"
+            {...register("shortDesc", { required: true })}
+          ></textarea>
         </div>
         {/* Text Editor */}
         <div className="w-full my-8 p-4 bg-white border rounded-lg">

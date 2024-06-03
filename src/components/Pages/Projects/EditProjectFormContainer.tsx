@@ -1,5 +1,4 @@
 "use client";
-import { CreateProject } from "@/actions/CreateProject";
 import { EditProject } from "@/actions/EditProject";
 import DynamicEditInput from "@/components/ui/DynamicEditInput ";
 import { Project } from "@/types/type";
@@ -7,7 +6,15 @@ import { useForm } from "react-hook-form";
 import { HiOutlineMail } from "react-icons/hi";
 import Swal from "sweetalert2";
 
-const EditProjectFormContainer = ({ project }: { project: Project }) => {
+const EditProjectFormContainer = ({
+  projectId,
+  project,
+  modalRef,
+}: {
+  projectId: string;
+  project: Project;
+  modalRef: React.RefObject<HTMLDialogElement>;
+}) => {
   const {
     register,
     handleSubmit,
@@ -30,7 +37,7 @@ const EditProjectFormContainer = ({ project }: { project: Project }) => {
       }
     });
 
-    const { _id, name, image, liveLink, githubLink, description } = data;
+    const { name, image, liveLink, githubLink, description } = data;
 
     const updatedProjectInfo = {
       name,
@@ -43,7 +50,8 @@ const EditProjectFormContainer = ({ project }: { project: Project }) => {
     };
 
     try {
-      const res = await EditProject(_id, updatedProjectInfo);
+      const res = await EditProject(projectId, updatedProjectInfo);
+      modalRef.current?.close();
       Swal.fire({
         icon: "success",
         title: "Project Successfully edited",
@@ -52,6 +60,7 @@ const EditProjectFormContainer = ({ project }: { project: Project }) => {
       });
       reset();
     } catch (err) {
+      modalRef.current?.close();
       Swal.fire({
         icon: "error",
         title: "Oops...",

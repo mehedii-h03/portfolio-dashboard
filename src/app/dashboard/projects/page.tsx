@@ -2,7 +2,7 @@ import ProjectList from "@/components/Pages/Projects/ProjectList";
 import Container from "@/components/ui/Container";
 
 const ProjectsPage = async () => {
-  const res = await fetch("http://localhost:3005/projects", {
+  const res = await fetch("https://server-five-inky-48.vercel.app/projects", {
     cache: "no-store",
   });
   const projects = await res.json();

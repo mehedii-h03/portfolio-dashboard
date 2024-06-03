@@ -2,7 +2,7 @@
 import { AiOutlineDelete } from "react-icons/ai";
 import Swal from "sweetalert2";
 
-const DeleteProject = ({ id }: { id: string }) => {
+const DeleteProject = ({ projectId }: { projectId: string }) => {
   const handlerDelete = (id: string) => {
     Swal.fire({
       title: "Are you sure?",
@@ -15,7 +15,7 @@ const DeleteProject = ({ id }: { id: string }) => {
     }).then(async (result) => {
       if (result.isConfirmed) {
         try {
-          const res = await fetch(`http://localhost:3005/projects/${id}`, {
+          const res = await fetch(`https://server-five-inky-48.vercel.app/projects/${id}`, {
             method: "DELETE",
             cache: "no-store",
           });
@@ -37,8 +37,8 @@ const DeleteProject = ({ id }: { id: string }) => {
 
   return (
     <button
-      onClick={() => handlerDelete(id)}
-      className="bg-white border hover:bg-red-600 text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300"
+      onClick={() => handlerDelete(projectId)}
+      className="bg-white border hover:bg-red-600 text-black hover:text-white text-xl px-2 py-2 rounded-lg transition-all duration-300 block"
     >
       <AiOutlineDelete />
     </button>
