@@ -1,7 +1,8 @@
 "use server";
-// import { Blog } from "@/types";
 
-export const CreateProject = async (data) => {
+import { Project } from "@/types/type";
+
+export const CreateProject = async (data: Project) => {
   const res = await fetch("http://localhost:3005/projects", {
     method: "POST",
     headers: { "Content-Type": "application/json" },

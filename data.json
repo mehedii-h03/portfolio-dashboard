@@ -21,7 +21,7 @@
       ],
       "liveLink": "https://unique-belekoy-f1bc50.netlify.app/",
       "githubLink": "https://github.com/mehedii-h03/event-360",
-      "id": "6809"
+      "_id": "6809"
     },
     {
       "name": "Melodia",
@@ -38,11 +38,11 @@
       "features": [
         "Users can sign in or signup account via google or email password.",
         "Students can select a class and make a payment with stripe payment system.",
-        "Built user-specific dashboards for student instructors and admins providing functionalities and intuitive interfaces for efficient management and seamless experience."
+        "Built user-specific dashboards for student instructors and admins prov_iding functionalities and intuitive interfaces for efficient management and seamless experience."
       ],
       "liveLink": "https://melodia-c35b9.web.app/",
       "githubLink": "https://github.com/mehedii-h03/melodia",
-      "id": "da31"
+      "_id": "da31"
     },
     {
       "name": "Hero Toy",
@@ -54,16 +54,16 @@
         "Firebase",
         "MongoDB"
       ],
-      "description": "The Toy Hero website is an online platform dedicated to showcasing and selling a wide range of toys. The project consists of two main components: the client-side and the server-side.",
+      "description": "The Toy Hero website is an online platform dedicated to showcasing and selling a w_ide range of toys. The project consists of two main components: the client-s_ide and the server-s_ide.",
       "image": "https://i.ibb.co/h9rYGSC/Fire-Shot-Capture-008-Hero-Toy-hero-toy-web-app.jpg",
       "features": [
         "Secure multiplatform authentication using google, github and email password via firebase.",
         "User will find fancy gallery section all product sections and many more cool sections.",
-        "Provide users with the ability to easily add update or delete their listed toys through the dedicated Add Toys and My Toys section, ensuring complete control and flexibility over their toy inventory."
+        "Prov_ide users with the ability to easily add update or delete their listed toys through the dedicated Add Toys and My Toys section, ensuring complete control and flexibility over their toy inventory."
       ],
       "liveLink": "https://hero-toy.web.app/",
       "githubLink": "https://github.com/mehedii-h03/hero-toy",
-      "id": "f2e0"
+      "_id": "f2e0"
     },
     {
       "name": "Kitchen Explorer",
@@ -75,44 +75,24 @@
         "Firebase",
         "MongoDB"
       ],
-      "description": "The Kitchen Explorer website is designed to provide users with a platform to explore various recipes, cooking tips, and kitchen gadgets. The project is divided into two main components: the client-side and the server-side.",
+      "description": "The Kitchen Explorer website is designed to prov_ide users with a platform to explore various recipes, cooking tips, and kitchen gadgets. The project is div_ided into two main components: the client-s_ide and the server-s_ide.",
       "image": "https://i.ibb.co/kct2RVK/Fire-Shot-Capture-007-Kitchen-Explorer-kitchen-explorer-b09f5-web-app.jpg",
       "features": [
         "Users can securely login with google, github and email password.",
         "To enhance user experience in our chefs section card image have implemented lazy load.",
-        "Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Provide logged-in users with a dedicated View Recipes button to explore a wide range culinary delights, ensuring an enhanced and personalized recipe browsing experience"
+        "Prov_ide logged-in users with a dedicated View Recipes button to explore a w_ide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Prov_ide logged-in users with a dedicated View Recipes button to explore a w_ide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Prov_ide logged-in users with a dedicated View Recipes button to explore a w_ide range culinary delights, ensuring an enhanced and personalized recipe browsing experience. Prov_ide logged-in users with a dedicated View Recipes button to explore a w_ide range culinary delights, ensuring an enhanced and personalized recipe browsing experience"
       ],
       "liveLink": "https://kitchen-explorer-b09f5.web.app/",
       "githubLink": "https://github.com/mehedii-h03/kitchen-explorer",
-      "id": "5018"
-    },
+      "_id": "5018"
+    }
+  ],
+  "blogs": [
     {
-      "id": "c588",
-      "name": "sfsfsdf",
-      "image": "/sfsdfs",
-      "liveLink": "https://melodia-c35b9.web.app/",
-      "githubLink": "sdf",
-      "description": "fsdfs",
-      "features": [
-        "1"
-      ],
-      "techs": [
-        "sdfsdf"
-      ]
-    },
-    {
-      "id": "5708",
-      "name": "sdfs",
-      "image": "https://i.ibb.co/TgWcj1r/Banglalink-relief-distribution-Courtesy",
-      "liveLink": "https://hero-toy.web.app/",
-      "githubLink": "sdf",
-      "description": "fsdfsdf",
-      "features": [
-        "111"
-      ],
-      "techs": [
-        "sdf"
-      ]
+      "id": "5172",
+      "blogTitle": "hello ",
+      "image": "https://example.com/images/water.jpg",
+      "content": "<h2>What is Lorem Ipsum?</h2><p class=\"ql-align-justify\"><strong>Lorem Ipsum</strong>&nbsp;is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum</p>"
     }
   ]
 }

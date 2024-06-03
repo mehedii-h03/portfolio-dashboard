@@ -1,23 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { HiOutlineMail } from "react-icons/hi";
 
-type DynamicInputProps = {
+type DynamicEditInputProps = {
   register: any;
   errors: any;
   placeholder: string;
   btnValue: string;
   registerName: string;
+  initialValues?: string[];
 };
 
-const DynamicInput = ({
+const DynamicEditInput = ({
   register,
   errors,
   placeholder,
   btnValue,
   registerName,
-}: DynamicInputProps) => {
-  const [fields, setFields] = useState([{ id: 1, value: "" }]);
+  initialValues = [],
+}: DynamicEditInputProps) => {
+  const [fields, setFields] = useState(
+    initialValues.map((value, index) => ({ id: index + 1, value }))
+  );
 
   const addField = () => {
     setFields([...fields, { id: fields.length + 1, value: "" }]);
@@ -37,10 +41,11 @@ const DynamicInput = ({
               type="text"
               className="input-field pl-12"
               placeholder={`${placeholder} ${field.id}`}
+              defaultValue={field.value}
               {...register(`${registerName}${field.id}`, { required: true })}
             />
-            {errors[`techs${field.id}`] && (
-              <p className="text-red-500">Technology is required</p>
+            {errors[`${registerName}${field.id}`] && (
+              <p className="text-red-500">{placeholder} is required</p>
             )}
           </div>
           {index > 0 ? (
@@ -62,4 +67,4 @@ const DynamicInput = ({
   );
 };
 
-export default DynamicInput;
+export default DynamicEditInput;

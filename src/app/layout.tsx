@@ -51,9 +51,9 @@ export default function RootLayout({
                 </Link>
               </li>
               <li>
-                <a>
+                <Link href={"/dashboard/blogs"}>
                   <RiNewsLine /> Blogs
-                </a>
+                </Link>
               </li>
               <li>
                 <Link href={"/dashboard/add-project"}>
@@ -61,10 +61,10 @@ export default function RootLayout({
                 </Link>
               </li>
               <li className="pb-6">
-                <a>
+                <Link href={"/dashboard/add-blog"}>
                   <BiNews />
                   Add Blogs
-                </a>
+                </Link>
               </li>
               <li className="border-t pt-2">
                 <a>
